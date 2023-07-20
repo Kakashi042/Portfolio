@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 2rem;
+    height: 5rem;
+}
+.logo{
+    font-size: 2rem;
+    margin: 0 1rem
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+
+ul li{
+    width: 7rem;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+}

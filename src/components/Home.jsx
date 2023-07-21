@@ -1,5 +1,6 @@
 import React from 'react'
-import '../styles/Home.css'
+import '../styles/Home.scss'
+import home from '../images/developer.svg'
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         </p>
         </div>
         <div className='home-img'>
-            <img src='' alt='Home icon'/>
+            <img src={home} alt='Home icon'/>
         </div>
     </div>
   )

@@ -1,5 +1,6 @@
 .home{
-    max-width: 1280px;
+    margin-top: 10rem;
+    max-width: 1400px;
     margin-inline: auto;
     display: flex;
     align-items: center;
@@ -8,7 +9,11 @@
 }
 
 .home-info{
-    width: 50%;
+    /* width: auto; */
+}
+
+.home-img img{
+    height: 23.5rem;
 }
 h2{
     font-size: 5rem;

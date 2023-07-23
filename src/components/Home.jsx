@@ -1,23 +1,31 @@
 import React from 'react'
 import '../styles/Home.scss'
 import home from '../images/developer.svg'
+import Skills from './Skills'
 
 const Home = () => {
   return (
+    <div>
     <div className='home'>
         <div className='home-info'>
         <header>
-            <h2>
-                Webdev_Prajwal
-            </h2>
+            <h1>
+                Front-End React Developer
+            </h1>
         </header>
         <p>
-            I empower your business with state-of-the-art digital solutions e.g. website, web application and digital marketing with a focus on your needs: web design, web development and more.
+            Hi, I'm Prajwal K.<br></br>A passionate Front-end React Developer based in Bengaluru, India.
         </p>
+        <div className='home-button'>
+            <button>Contact me</button>
+            <button>Read more</button>
+        </div>
         </div>
         <div className='home-img'>
             <img src={home} alt='Home icon'/>
         </div>
+    </div>
+    <Skills />
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-import '../styles/Skills.scss'
+import '../styles/Connections.scss'
 
 const Skills = () => {
   return (
-    <div className='links'>
+    <div className='links' href='#readMore'>
         <span className='line'></span>
         <span>
         <a href='#'>

@@ -1,0 +1,14 @@
+@import '../styles/style.scss';
+
+footer{
+    background-color:$black;
+    div{
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-inline: auto;
+        color: white;
+    }
+}
+

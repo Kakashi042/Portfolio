@@ -5,15 +5,44 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 2rem;
+    // margin: 0 2rem;
     height: 4rem;
     color: $font-primary;
-    padding: 1rem 2rem;
+    padding: 1rem 4rem;
+    position: sticky;
+    top: 0%;
+    background-color: #f6f6f6;;
+    h3{
+        font-size: 2.5rem;
+    }
+    a{
+        color: $font-primary;
+        font-size: 1.2rem;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    a:hover{
+        color: $font-secondary;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    
+    }
+    ul li{
+        width: 7rem;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 1.2rem;
+    }
 }
 
-h3{
-    font-size: 2.5rem;
-}
+
 
 
 .false{
@@ -31,25 +60,8 @@ h3{
     // font-size: 1.5rem;
     // margin: 0 1rem; 
 }
-a:hover{
-    color: $font-secondary;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
 
-}
-ul li{
-    width: 7rem;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
+
 // ul button, ul img{
 //     height: 3rem;
 // }

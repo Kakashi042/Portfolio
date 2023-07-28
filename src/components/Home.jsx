@@ -1,12 +1,18 @@
 import React from 'react'
 import '../styles/Home.scss'
 import home from '../images/developer.svg'
-import Skills from './Skills'
+import Connections from './Connections'
+import Tech from './Tech'
+import { Link } from 'react-scroll'
+import { Link as Anchor } from 'react-router-dom'
+import Testimonials from './Testimonials'
+import Contact from './Contact'
+
 
 const Home = () => {
   return (
     <div>
-    <div className='home'>
+    <div id='home' href='#top' className='home'>
         <div className='home-info'>
         <header>
             <h1>
@@ -17,17 +23,22 @@ const Home = () => {
             Hi, I'm Prajwal K.<br></br>A passionate Front-end React Developer based in Bengaluru, India.
         </p>
         <div className='home-button'>
-            <button>Contact me</button>
-            <button>Read more</button>
+            <Anchor to='/contact' className='button1'><button >Contact me</button></Anchor>
+            <Link className='button2' to='about' spy={true} smooth={true} offset={-100} duration={500}><button>Read more</button></Link>
         </div>
         </div>
         <div className='home-img'>
             <img src={home} alt='Home icon'/>
         </div>
     </div>
-    <Skills />
+    <Connections />
+    <div className='tech'>
+      <Tech />
+      <Testimonials />
     </div>
-  )
+      <Contact />
+    </div>
+  )  
 }
 
 export default Home;

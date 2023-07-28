@@ -1,0 +1,51 @@
+@import '../styles/style.scss';
+
+.tech{
+    max-width: 80vw;
+    margin: auto;
+    border-left:1px solid black ;
+    border-right: 1px solid black;
+    margin: auto;
+
+}
+.tech-overview{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.tech-image{
+    width: 50%;
+}
+
+.tech-image img{
+    width: 50rem;
+    height: auto;
+}
+
+.tech-detail h1{
+    display: flex;
+    justify-content: center;
+}
+
+.stack-image span:hover{
+    cursor: pointer;
+}
+
+.resume{ 
+    button{
+    margin: 2rem 0 5rem 0;
+    background-color: $font-secondary;
+    width: auto;
+    height: auto;
+    padding: 1.1rem 3.3rem;
+    font-size: 1rem;
+    box-shadow: 7px 7px $black;
+    transition: ease-in-out 0.3s;
+    text-transform: uppercase;
+    }
+    button:hover{
+        box-shadow: none;
+    }
+}

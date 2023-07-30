@@ -30,19 +30,16 @@
     .cards{
         display: flex;
         gap: 1rem;
-        margin-inline: 6rem;
+        margin-inline: 16rem;
         justify-content: center;
     }
     section{
-        // display: flex;
-        // gap: 1rem;
         padding: 2rem;
         box-shadow: 0 0 3px gray;
         border-radius: 2rem;
         border: 1px solid white;
         width: 25rem;
         margin-bottom: 10rem;
-        
     }
     article{
         color: #808080
@@ -60,6 +57,75 @@
     p{
         color: gray;
     }
-    
-    
+}
+
+// @media only screen and (max-width:1850px){
+//     .testimonials{
+//         .cards{
+//             .test-card{
+//                 width:20rem
+//             }
+//         }
+//     }
+// }
+@media only screen and (max-width:1850px){
+    .testimonials{
+        .cards{
+            .test-card{
+                width:18rem
+            }
+        }
+    }
+}
+@media only screen and (max-width:1400px){
+    .testimonials{
+        h1{
+            font-size: 2.5rem;
+        }
+        .cards{
+            .test-card{
+                width:15rem
+            }
+        }
+    }
+}
+@media only screen and (max-width:1250px){
+    .testimonials{
+        .test-card{
+            p{
+                font-size: 1rem;
+            }
+        }
+        h1{
+            font-size: 2rem;
+        }
+        .cards{
+            .test-card{
+                width:13rem
+            }
+        }
+    }
+}
+@media only screen and (max-width:1150px){
+    .testimonials{
+        .cards{
+            flex-direction: column;
+            .test-card{
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1150px){
+    .testimonials{
+        h1{
+            font-size: 1.5rem;
+        }
+        .cards{
+            flex-direction: column;
+            .test-card{
+                width: 10rem;
+            }
+        }
+    }
 }

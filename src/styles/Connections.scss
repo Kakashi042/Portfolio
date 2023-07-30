@@ -5,36 +5,64 @@
     align-items: center;
     margin-top: 10rem;
     margin-bottom: 10rem;
-}
-.line{
-    display: inline-block;
-    width: 25%;
-    height: 3px;
-    color:$black;
-    border-top: 1px solid $black;
-    align-items: center;
-}
-
-span{
-    margin-right: 1rem;
-}
-
-.links img:hover {
-    animation-name: rotate;
-    animation-duration: 0.6s;
-    animation-direction: normal;
-    border-radius: 50%;
-  }
-  
-  @keyframes rotate {
-    0% {
-      transform: rotate(0);
+    .line{
+      display: inline-block;
+      width: 25%;
+      height: 3px;
+      color:$black;
+      border-top: 1px solid $black;
+      align-items: center;
     }
-    50%{
+    span:nth-child(1){
+      margin-right: 1rem;
+    }
+    .connect{
+      margin-right: 1rem;
+    }
+    
+    img:hover {
+      animation-name: rotate;
+      animation-duration: 0.6s;
+      animation-direction: normal;
+      border-radius: 50%;
+    }
+    
+    @keyframes rotate {
+      0% {
+        transform: rotate(0);
+      }
+      50%{
         transform: rotate(180);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
-    100% {
-      transform: rotate(360deg);
-    }
+    
   }
 
+
+@media only screen and (max-width:1040px){
+  
+  .links{
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    .line{
+      display: inline-block;
+      width: 50%;
+    }
+    span:nth-child(1),
+    span:nth-child(2),
+    span:nth-child(3){
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media only screen and (max-width:1040px){
+  .links{
+    margin-top: 0rem;
+  }
+}

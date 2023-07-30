@@ -40,30 +40,36 @@
         font-weight: 300;
         font-size: 1.2rem;
     }
+    .hamburger{
+        display: none;
+    }
 }
 
-
-
-
-.false{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 2rem;
-    height: 5rem;
-    color: $font-secondary;
+@media only screen and (max-width:950px){
+    .navbar{
+        ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f6f6f6;
+            position: fixed;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+            left: 100%;
+            bottom: 0%;
+            transition: ease-in-out 0.3s;
+        }
+        .hamburger{
+            display: block;
+            font-size: 2rem;
+            z-index: 999;
+        }
+        .active{
+           
+            left: 0%;
+        }
 }
-
-
-.logo{
-    // font-size: 1.5rem;
-    // margin: 0 1rem; 
 }
-
-
-// ul button, ul img{
-//     height: 3rem;
-// }
 
 

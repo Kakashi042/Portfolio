@@ -8,45 +8,58 @@
     align-items: center;
     justify-content: space-between;
     gap: 0;
-}
-
-.home-info{
-    width: auto; 
-}
-
-.home-button{
-    margin-top: 5rem;
-    button{
-        width: auto;
-        height: auto;
-        margin-right: 2rem;
-        padding: 1.1rem 3.3rem;
-        font-size: 1rem;
-        box-shadow: 7px 7px $black;
-        transition: ease-in-out 0.3s;
-        text-transform: uppercase;
+    .home-info{
+        width: min-content; 
+        h1{
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            border-right: 2px solid;
+            animation: typing 1.7s steps(30, end) forwards, blinking 1s 4 forwards;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blinking {
+           0% {border-right-color: transparent}
+           50% {border-right-color: black}
+           100% {border-right-color: transparent}
+        }
+        
     }
-}
-
-
-
-.home-button  .button1 button{
-    background-color: $font-secondary;
-}
-
-.home-button .button2 button{
-    background-color: $font-primary;
-    color: $font-secondary;
-}
-
-button:hover{
-    box-shadow: none;
-    transition: ease-in-out 0.3s;
-    cursor: pointer;
-}
-
-.home-img img{
-    height: 23.5rem;
+    .home-button{
+        margin-top: 5rem;
+        button{
+            width: auto;
+            height: auto;
+            margin-right: 2rem;
+            padding: 1.1rem 3.3rem;
+            font-size: 1rem;
+            box-shadow: 7px 7px $black;
+            transition: ease-in-out 0.3s;
+            text-transform: uppercase;
+        }
+        .button1 button{
+            background-color: $font-secondary;
+        }
+        
+        .button2 button{
+            background-color: $font-primary;
+            color: $font-secondary;
+        }
+    }
+    button:hover{
+        box-shadow: none;
+        transition: ease-in-out 0.3s;
+        cursor: pointer;
+    }
+    
+    .home-img img{
+        height: 23.5rem;
+    }
 }
 
 h1{
@@ -56,23 +69,134 @@ p{
     font-size: 1.5rem;
 }
 
-.home-info h1{
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    border-right: 2px solid;
-    animation: typing 1.7s steps(30, end) forwards, blinking 1s 4 forwards;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blinking {
-   0% {border-right-color: transparent}
-   50% {border-right-color: black}
-   100% {border-right-color: transparent}
+@media only screen and (max-width:1600px){
+    .home{
+        
+        margin: 10rem 10rem 10rem 10rem;
+        h1{font-size: 3.5rem;}
+        p{
+            font-size: 1.5rem;
+        }
+        .home-img img{
+            height: 20.5rem;
+        }
+    }
 }
 
 
+@media only screen and (max-width:1600px){
+    .home{
+        
+        margin: 10rem 10rem 10rem 10rem;
+        h1{font-size: 3rem;}
+        p{
+            font-size: 1.5rem;
+        }
+        .home-img img{
+            height: 17.5rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1400px){
+    .home{
+        
+        margin: 10rem 10rem 10rem 10rem;
+        h1{font-size: 2.5rem;}
+        p{
+            font-size: 1.5rem;
+        }
+        .home-img img{
+            height: 14.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width:1150px){
+    .home{
+        margin: 10rem 5rem 10rem 5rem;
+        h1{font-size: 2.5rem;}
+        p{
+            font-size: 1.5rem;
+        }
+        .home-img img{
+            height: 14.5rem;
+        }
+    }
+}
+
+
+@media only screen and (max-width:1040px){
+    .home{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 5rem 5rem 5rem 5rem;
+        h1{
+            font-size: 2.3rem;
+        }
+        p{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        .home-img img{
+            height: 12.5rem;
+        }
+        .home-button{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width:650px){
+    .home{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 5rem 5rem 5rem 5rem;
+        h1{font-size: 2rem;}
+        p{
+            font-size: 1rem;
+        }
+        .home-img img{
+            height: 12.5rem;
+        }
+        .home-button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5rem;
+            button{
+                width: auto;
+                height: auto;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:450px){
+    .home{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 2rem 5rem 2rem 5rem;
+        h1{font-size: 1.5rem;}
+        p{
+            font-size: 1rem;
+        }
+        .home-img img{
+            height: 12.5rem;
+        }
+        .home-button{
+            
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            button{
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

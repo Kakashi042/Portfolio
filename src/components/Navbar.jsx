@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/Navbar.scss'
 import { Link } from 'react-router-dom';
+import { Link as Anchor } from 'react-scroll';
 
 
 const Navbar = () => {
@@ -13,17 +14,31 @@ const Navbar = () => {
     //         setClassName('navbar')
     //     }else setClassName('dark')
     // }
+
+    const [clicked, setClicked] = useState(true);
+    // const [touch, setTouch] = useState(true);
+
+    const handle = ()=>{
+        if(clicked===false){
+            setClicked(true)
+        }else
+            setClicked(false)
+    }
    
   return (
     <nav className='navbar' >
         <div className='logo'>
             <Link to='/' onClick='window.location.href=#top' ><h3>PK</h3></Link>
         </div>
-        <div className='navbar-items'>
-            <ul>
-                <li><Link to='/' onClick='window.location.href=#top'>Home</Link></li>
-                <li><Link to='/projects'>Projects</Link></li>
-                <li><Link to='/contact'>Contact</Link></li>
+        <div>
+            <ul className={clicked?'':'active'}>
+                <li>
+                    <Anchor to='home' spy={true} smooth={true} offset={-500} duration={500}>
+                        <Link to='/' onClick={handle}>Home</Link>
+                    </Anchor>
+                </li>
+                <li><Link to='/projects' onClick={handle}>Projects</Link></li>
+                <li><Link to='/contact' onClick={handle}>Contact</Link></li>
                 {/* <li onClick={()=>handleSubmit()}>
                     { dark ?
                         <img src="data:image/png;base64,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"></img>:
@@ -32,6 +47,10 @@ const Navbar = () => {
                 </li> */}
             </ul>
         </div>
+            <div className='hamburger' onClick={handle}>
+            <i className={clicked?"fa-solid fa-bars":"fa-solid fa-xmark"}></i>
+        </div>
+        
     </nav>
   )
 }

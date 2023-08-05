@@ -1,11 +1,16 @@
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
 import './App.scss'
 import Navbar from './components/Navbar'
-import Home from './components/Home'
 import Footer from './components/Footer'
-import ContactPage from './components/Pages/ContactPage'
-import Projects from './components/Pages/Projects'
+import { lazy, Suspense } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
+import fallbackRender from './components/ErrorBoundary'
+
+const Home = lazy(()=>import('./components/Home'))
+const Projects = lazy(()=>import('./components/Pages/Projects'))
+const ContactPage = lazy(()=>import('./components/Pages/ContactPage'))
+
 
 function App() {
 
@@ -13,13 +18,16 @@ function App() {
     <>
       <BrowserRouter>
       <Navbar />
+      <ErrorBoundary fallbackRender={fallbackRender}>
+      <Suspense fallback={<h1>Loading...</h1>}>
       <Routes>
-        <Route path='/' exact element = {<Home />} />
+        <Route path='/' element = {<Home />} />
         <Route path='/projects' element = {<Projects />} />
         <Route path='/contact' element = {<ContactPage />} />
       </Routes>
-      
       <Footer />
+      </Suspense>
+      </ErrorBoundary>
       </BrowserRouter>
     </>
   )

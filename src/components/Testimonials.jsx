@@ -3,45 +3,6 @@ import '../styles/Testimonials.scss'
 
 const Testimonials = () => {
   return (
-    // <div className='testimonials'>
-    //     <div>
-    //         <h1>Testimonials</h1>
-    //     </div>
-    //     <div className='test-detail'>
-    //         <div>
-    //         <section>
-    //         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/circled-m.png" alt="circled-m"/>
-    //             </section>
-    //             <span>Mom</span>
-                
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <p>He's an out of the box thinker. Quality work done. Extremely satisfied.</p>
-    //         </div>
-    //         {/* <div>
-    //         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/circled-d.png" alt="circled-m"/>
-    //             <span>Dad</span>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i class="fa fa-star-half" aria-hidden="true"></i>
-    //             <p>He's an out of the box thinker. Quality work done. Extremely satisfied.</p>
-    //         </div>
-    //         <div>
-    //         <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/000000/circled-s.png" alt="circled-m"/>
-    //             <span>Sibling</span>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <i className="fa fa-star" aria-hidden="true"></i>
-    //             <p>He's an out of the box thinker. Quality work done. Extremely satisfied.</p>
-    //         </div> */}
-    //     </div>
-    // </div>
 
     <div className='testimonials'>
         <h1>testimonials</h1>

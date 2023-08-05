@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import '../styles/Home.scss'
 import home from '../images/developer.svg'
-import Connections from './Connections'
-import Tech from './Tech'
 import { Link } from 'react-scroll'
 import { Link as Anchor } from 'react-router-dom'
-import Testimonials from './Testimonials'
-import Contact from './Contact'
+import { ErrorBoundary } from 'react-error-boundary'
+import fallbackRender from './ErrorBoundary'
+
+
+const Connections = lazy(()=> import('./Connections'))
+const Tech = lazy(()=>import('./Tech'))
+const Testimonials = lazy(()=>import('./Testimonials'))
+const Contact = lazy(()=>import('./Contact')) 
 
 
 const Home = () => {
@@ -28,17 +32,24 @@ const Home = () => {
         </div>
         </div>
         <div className='home-img'>
-            <img src={home} alt='Home icon'/>
+            <img src={home} height='375px' alt='Home icon'/>
         </div>
     </div>
+    <ErrorBoundary fallbackRender={fallbackRender} onReset={()=>{}}>
+    <Suspense fallback={<h1>Loading...</h1>}>
     <Connections />
     <div className='tech'>
       <Tech />
       <Testimonials />
     </div>
       <Contact />
+    </Suspense>
+    </ErrorBoundary>
     </div>
   )  
 }
+
+
+
 
 export default Home;

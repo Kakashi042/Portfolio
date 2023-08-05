@@ -7,10 +7,10 @@ const Tech = () => {
     
       <div className='tech-overview' id='about'>
         <div className='tech-image'>
-          <img src={tech} />
+          <img src={tech} width='720px' alt='tech image'/>
           <p>As a Front-End Developer, I possess an impressive arsenal of skills in HTML, CSS, JavaScript, React, Tailwind, and SCSS. I excel in designing and maintaining responsive websites that offer a smooth user experience. My expertise lies in crafting dynamic, engaging interfaces through writing clean and optimized code and utilizing cutting-edge development tools and techniques. I am also a team player who thrives in collaborating with cross-functional teams to produce outstanding web applications</p>
           <div className='resume'>
-            <a href='../images/Prajwal Resume(May 2023).docx' target='_blank'><button>MY RESUME</button></a>
+            <a href='../images/Prajwal Resume(May 2023).docx' alt='Resume' target='_blank'><button>MY RESUME</button></a>
           </div>
         </div>
             <div className='tech-detail'>
